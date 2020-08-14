@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D56051624E4CD580032B7EB /* BenchHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56051524E4CD580032B7EB /* BenchHelperView.swift */; };
+		782256B724A28E2100FB2BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256B624A28E2100FB2BA7 /* AppDelegate.swift */; };
+		782256B924A28E2100FB2BA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256B824A28E2100FB2BA7 /* SceneDelegate.swift */; };
+		782256BB24A28E2100FB2BA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256BA24A28E2100FB2BA7 /* ContentView.swift */; };
+		782256BD24A28E2300FB2BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782256BC24A28E2300FB2BA7 /* Assets.xcassets */; };
+		782256C024A28E2300FB2BA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 782256BF24A28E2300FB2BA7 /* Preview Assets.xcassets */; };
+		782256C324A28E2300FB2BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782256C124A28E2300FB2BA7 /* LaunchScreen.storyboard */; };
+		782256CE24A28E2300FB2BA7 /* Replay_ScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256CD24A28E2300FB2BA7 /* Replay_ScorerTests.swift */; };
+		7828CC6124DE3185002C7D0E /* ScorerPickerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7828CC6024DE3185002C7D0E /* ScorerPickerImageView.swift */; };
+		783D6D3C24E07F7B00CC3236 /* StepCounterHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D6D3B24E07F7B00CC3236 /* StepCounterHelperView.swift */; };
+		783D6D3E24E0804300CC3236 /* SlideHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D6D3D24E0804300CC3236 /* SlideHelperView.swift */; };
+		783D6D4224E0832100CC3236 /* BasketballHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783D6D4124E0832100CC3236 /* BasketballHelperView.swift */; };
+		78572B2E24E44E8F0042A7E0 /* MultiColorTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78572B2D24E44E8F0042A7E0 /* MultiColorTextView.swift */; };
+		786278D924E1FB3700CD3D6F /* HelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786278D824E1FB3700CD3D6F /* HelperView.swift */; };
+		789E867D24E0CE4A00BE33A3 /* PullUpHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E867C24E0CE4A00BE33A3 /* PullUpHelperView.swift */; };
+		789E867F24E0D63900BE33A3 /* RobotDanceHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E867E24E0D63900BE33A3 /* RobotDanceHelperView.swift */; };
+		789E868124E0DAF100BE33A3 /* BocciaHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E868024E0DAF100BE33A3 /* BocciaHelperView.swift */; };
+		789E868324E0E05500BE33A3 /* TireFlipHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E868224E0E05500BE33A3 /* TireFlipHelperView.swift */; };
+		789E868524E0E1A300BE33A3 /* CellPhoneHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E868424E0E1A300BE33A3 /* CellPhoneHelperView.swift */; };
+		789E868724E0E2B400BE33A3 /* TreadmillHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E868624E0E2B400BE33A3 /* TreadmillHelperView.swift */; };
+		789E868924E0E6C400BE33A3 /* RowMachineHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E868824E0E6C400BE33A3 /* RowMachineHelperView.swift */; };
+		78AE7ED824E195DD00CA5644 /* WeightMachineHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE7ED724E195DD00CA5644 /* WeightMachineHelperView.swift */; };
+		78AE7EDA24E1993B00CA5644 /* HealthUnitsHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE7ED924E1993B00CA5644 /* HealthUnitsHelperView.swift */; };
+		78AE7EDC24E199F900CA5644 /* PrecisionHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE7EDB24E199F900CA5644 /* PrecisionHelperView.swift */; };
+		78AE7EDF24E1BBB400CA5644 /* MissionScorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE7EDE24E1BBB400CA5644 /* MissionScorerView.swift */; };
+		78AE7EE424E1D2C300CA5644 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AE7EE324E1D2C300CA5644 /* SectionHeaderView.swift */; };
+		78B4251524DDAF24009285D4 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4251424DDAF24009285D4 /* ImageModifier.swift */; };
+		78B4251724DDB32B009285D4 /* ScoreSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4251624DDB32B009285D4 /* ScoreSummaryView.swift */; };
+		78B4251A24DDB4D0009285D4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4251924DDB4D0009285D4 /* SettingsView.swift */; };
+		78B4251C24DDB550009285D4 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4251B24DDB550009285D4 /* SettingsRowView.swift */; };
+		78B4251F24DDB6F1009285D4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4251E24DDB6F1009285D4 /* AboutView.swift */; };
+		78B4252224DDCDA4009285D4 /* SummaryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4252124DDCDA4009285D4 /* SummaryRowView.swift */; };
+		78C2A12224DF7A6F0095D7B6 /* InspectionHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2A12124DF7A6F0095D7B6 /* InspectionHelperView.swift */; };
+		78C2A12424DF9B990095D7B6 /* InnovationHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2A12324DF9B990095D7B6 /* InnovationHelperView.swift */; };
+		78EEC35424DC759B00025961 /* ScorerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC35324DC759B00025961 /* ScorerView.swift */; };
+		78EEC35724DC760300025961 /* ScorerToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC35624DC760300025961 /* ScorerToggleView.swift */; };
+		78EEC35924DC781000025961 /* ScorerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC35824DC781000025961 /* ScorerPickerView.swift */; };
+		78EEC35C24DC792900025961 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC35B24DC792900025961 /* Constants.swift */; };
+		78EEC35E24DC7A9700025961 /* ScorerStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC35D24DC7A9700025961 /* ScorerStepperView.swift */; };
+		78EEC36124DC7F6200025961 /* GameSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC36024DC7F6200025961 /* GameSectionView.swift */; };
+		78EEC36424DC7FCC00025961 /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EEC36324DC7FCC00025961 /* Scorer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		782256CA24A28E2300FB2BA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 782256AB24A28E2100FB2BA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 782256B224A28E2100FB2BA7;
+			remoteInfo = "Replay Scorer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D56051524E4CD580032B7EB /* BenchHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchHelperView.swift; sourceTree = "<group>"; };
+		782256B324A28E2100FB2BA7 /* Replay Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replay Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		782256B624A28E2100FB2BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		782256B824A28E2100FB2BA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		782256BA24A28E2100FB2BA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		782256BC24A28E2300FB2BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		782256BF24A28E2300FB2BA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		782256C224A28E2300FB2BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		782256C424A28E2300FB2BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		782256C924A28E2300FB2BA7 /* Replay ScorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Replay ScorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		782256CD24A28E2300FB2BA7 /* Replay_ScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Replay_ScorerTests.swift; sourceTree = "<group>"; };
+		782256CF24A28E2300FB2BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7828CC6024DE3185002C7D0E /* ScorerPickerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerPickerImageView.swift; sourceTree = "<group>"; };
+		783D6D3B24E07F7B00CC3236 /* StepCounterHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCounterHelperView.swift; sourceTree = "<group>"; };
+		783D6D3D24E0804300CC3236 /* SlideHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideHelperView.swift; sourceTree = "<group>"; };
+		783D6D4124E0832100CC3236 /* BasketballHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballHelperView.swift; sourceTree = "<group>"; };
+		78572B2D24E44E8F0042A7E0 /* MultiColorTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiColorTextView.swift; sourceTree = "<group>"; };
+		786278D824E1FB3700CD3D6F /* HelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperView.swift; sourceTree = "<group>"; };
+		789E867C24E0CE4A00BE33A3 /* PullUpHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpHelperView.swift; sourceTree = "<group>"; };
+		789E867E24E0D63900BE33A3 /* RobotDanceHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotDanceHelperView.swift; sourceTree = "<group>"; };
+		789E868024E0DAF100BE33A3 /* BocciaHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BocciaHelperView.swift; sourceTree = "<group>"; };
+		789E868224E0E05500BE33A3 /* TireFlipHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TireFlipHelperView.swift; sourceTree = "<group>"; };
+		789E868424E0E1A300BE33A3 /* CellPhoneHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhoneHelperView.swift; sourceTree = "<group>"; };
+		789E868624E0E2B400BE33A3 /* TreadmillHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreadmillHelperView.swift; sourceTree = "<group>"; };
+		789E868824E0E6C400BE33A3 /* RowMachineHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowMachineHelperView.swift; sourceTree = "<group>"; };
+		78AE7ED724E195DD00CA5644 /* WeightMachineHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightMachineHelperView.swift; sourceTree = "<group>"; };
+		78AE7ED924E1993B00CA5644 /* HealthUnitsHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthUnitsHelperView.swift; sourceTree = "<group>"; };
+		78AE7EDB24E199F900CA5644 /* PrecisionHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecisionHelperView.swift; sourceTree = "<group>"; };
+		78AE7EDE24E1BBB400CA5644 /* MissionScorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionScorerView.swift; sourceTree = "<group>"; };
+		78AE7EE324E1D2C300CA5644 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		78B4251424DDAF24009285D4 /* ImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
+		78B4251624DDB32B009285D4 /* ScoreSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreSummaryView.swift; sourceTree = "<group>"; };
+		78B4251924DDB4D0009285D4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		78B4251B24DDB550009285D4 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		78B4251E24DDB6F1009285D4 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		78B4252124DDCDA4009285D4 /* SummaryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryRowView.swift; sourceTree = "<group>"; };
+		78C2A12124DF7A6F0095D7B6 /* InspectionHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectionHelperView.swift; sourceTree = "<group>"; };
+		78C2A12324DF9B990095D7B6 /* InnovationHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnovationHelperView.swift; sourceTree = "<group>"; };
+		78EEC35324DC759B00025961 /* ScorerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerView.swift; sourceTree = "<group>"; };
+		78EEC35624DC760300025961 /* ScorerToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerToggleView.swift; sourceTree = "<group>"; };
+		78EEC35824DC781000025961 /* ScorerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerPickerView.swift; sourceTree = "<group>"; };
+		78EEC35B24DC792900025961 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78EEC35D24DC7A9700025961 /* ScorerStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorerStepperView.swift; sourceTree = "<group>"; };
+		78EEC36024DC7F6200025961 /* GameSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSectionView.swift; sourceTree = "<group>"; };
+		78EEC36324DC7FCC00025961 /* Scorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
+		78EEC36524DCECF100025961 /* Replay Scorer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Replay Scorer.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		782256B024A28E2100FB2BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782256C624A28E2300FB2BA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		782256AA24A28E2100FB2BA7 = {
+			isa = PBXGroup;
+			children = (
+				782256B524A28E2100FB2BA7 /* Replay Scorer */,
+				782256CC24A28E2300FB2BA7 /* Replay ScorerTests */,
+				782256B424A28E2100FB2BA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		782256B424A28E2100FB2BA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				782256B324A28E2100FB2BA7 /* Replay Scorer.app */,
+				782256C924A28E2300FB2BA7 /* Replay ScorerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		782256B524A28E2100FB2BA7 /* Replay Scorer */ = {
+			isa = PBXGroup;
+			children = (
+				78EEC36524DCECF100025961 /* Replay Scorer.entitlements */,
+				78B4251824DDB4BC009285D4 /* Settings */,
+				78EEC35224DC756400025961 /* Supporting Files */,
+				78EEC35124DC750000025961 /* Scorer */,
+				782256BA24A28E2100FB2BA7 /* ContentView.swift */,
+				782256BC24A28E2300FB2BA7 /* Assets.xcassets */,
+				782256C124A28E2300FB2BA7 /* LaunchScreen.storyboard */,
+				782256C424A28E2300FB2BA7 /* Info.plist */,
+				782256BE24A28E2300FB2BA7 /* Preview Content */,
+			);
+			path = "Replay Scorer";
+			sourceTree = "<group>";
+		};
+		782256BE24A28E2300FB2BA7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				782256BF24A28E2300FB2BA7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		782256CC24A28E2300FB2BA7 /* Replay ScorerTests */ = {
+			isa = PBXGroup;
+			children = (
+				782256CD24A28E2300FB2BA7 /* Replay_ScorerTests.swift */,
+				782256CF24A28E2300FB2BA7 /* Info.plist */,
+			);
+			path = "Replay ScorerTests";
+			sourceTree = "<group>";
+		};
+		78B4251824DDB4BC009285D4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				78B4251D24DDB6DD009285D4 /* Sections */,
+				78B4251924DDB4D0009285D4 /* SettingsView.swift */,
+				78B4251B24DDB550009285D4 /* SettingsRowView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		78B4251D24DDB6DD009285D4 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				78B4251E24DDB6F1009285D4 /* AboutView.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		78B4252024DDCD95009285D4 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				78B4251624DDB32B009285D4 /* ScoreSummaryView.swift */,
+				78B4252124DDCDA4009285D4 /* SummaryRowView.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		78C2A12024DF7A330095D7B6 /* Mission Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				78C2A12124DF7A6F0095D7B6 /* InspectionHelperView.swift */,
+				78C2A12324DF9B990095D7B6 /* InnovationHelperView.swift */,
+				783D6D3B24E07F7B00CC3236 /* StepCounterHelperView.swift */,
+				783D6D3D24E0804300CC3236 /* SlideHelperView.swift */,
+				783D6D4124E0832100CC3236 /* BasketballHelperView.swift */,
+				789E867C24E0CE4A00BE33A3 /* PullUpHelperView.swift */,
+				789E867E24E0D63900BE33A3 /* RobotDanceHelperView.swift */,
+				789E868024E0DAF100BE33A3 /* BocciaHelperView.swift */,
+				789E868224E0E05500BE33A3 /* TireFlipHelperView.swift */,
+				789E868424E0E1A300BE33A3 /* CellPhoneHelperView.swift */,
+				789E868624E0E2B400BE33A3 /* TreadmillHelperView.swift */,
+				789E868824E0E6C400BE33A3 /* RowMachineHelperView.swift */,
+				78AE7ED724E195DD00CA5644 /* WeightMachineHelperView.swift */,
+				78AE7ED924E1993B00CA5644 /* HealthUnitsHelperView.swift */,
+				78AE7EDB24E199F900CA5644 /* PrecisionHelperView.swift */,
+				78AE7EE324E1D2C300CA5644 /* SectionHeaderView.swift */,
+				786278D824E1FB3700CD3D6F /* HelperView.swift */,
+				78572B2D24E44E8F0042A7E0 /* MultiColorTextView.swift */,
+				0D56051524E4CD580032B7EB /* BenchHelperView.swift */,
+			);
+			path = "Mission Helper Views";
+			sourceTree = "<group>";
+		};
+		78EEC35124DC750000025961 /* Scorer */ = {
+			isa = PBXGroup;
+			children = (
+				78C2A12024DF7A330095D7B6 /* Mission Helper Views */,
+				78EEC35F24DC7F4800025961 /* Modules View */,
+				78EEC35A24DC791D00025961 /* Helper */,
+				78EEC35524DC75D600025961 /* List Row Types */,
+				78EEC35324DC759B00025961 /* ScorerView.swift */,
+				78EEC36324DC7FCC00025961 /* Scorer.swift */,
+				78AE7EDE24E1BBB400CA5644 /* MissionScorerView.swift */,
+			);
+			path = Scorer;
+			sourceTree = "<group>";
+		};
+		78EEC35224DC756400025961 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				782256B624A28E2100FB2BA7 /* AppDelegate.swift */,
+				782256B824A28E2100FB2BA7 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78EEC35524DC75D600025961 /* List Row Types */ = {
+			isa = PBXGroup;
+			children = (
+				78B4252024DDCD95009285D4 /* Summary */,
+				78EEC35624DC760300025961 /* ScorerToggleView.swift */,
+				78EEC35824DC781000025961 /* ScorerPickerView.swift */,
+				78EEC35D24DC7A9700025961 /* ScorerStepperView.swift */,
+				7828CC6024DE3185002C7D0E /* ScorerPickerImageView.swift */,
+			);
+			path = "List Row Types";
+			sourceTree = "<group>";
+		};
+		78EEC35A24DC791D00025961 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				78EEC35B24DC792900025961 /* Constants.swift */,
+				78B4251424DDAF24009285D4 /* ImageModifier.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		78EEC35F24DC7F4800025961 /* Modules View */ = {
+			isa = PBXGroup;
+			children = (
+				78EEC36024DC7F6200025961 /* GameSectionView.swift */,
+			);
+			path = "Modules View";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		782256B224A28E2100FB2BA7 /* Replay Scorer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782256D224A28E2300FB2BA7 /* Build configuration list for PBXNativeTarget "Replay Scorer" */;
+			buildPhases = (
+				782256AF24A28E2100FB2BA7 /* Sources */,
+				782256B024A28E2100FB2BA7 /* Frameworks */,
+				782256B124A28E2100FB2BA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Replay Scorer";
+			packageProductDependencies = (
+			);
+			productName = "Replay Scorer";
+			productReference = 782256B324A28E2100FB2BA7 /* Replay Scorer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		782256C824A28E2300FB2BA7 /* Replay ScorerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 782256D524A28E2300FB2BA7 /* Build configuration list for PBXNativeTarget "Replay ScorerTests" */;
+			buildPhases = (
+				782256C524A28E2300FB2BA7 /* Sources */,
+				782256C624A28E2300FB2BA7 /* Frameworks */,
+				782256C724A28E2300FB2BA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				782256CB24A28E2300FB2BA7 /* PBXTargetDependency */,
+			);
+			name = "Replay ScorerTests";
+			productName = "Replay ScorerTests";
+			productReference = 782256C924A28E2300FB2BA7 /* Replay ScorerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		782256AB24A28E2100FB2BA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Havish Netla";
+				TargetAttributes = {
+					782256B224A28E2100FB2BA7 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					782256C824A28E2300FB2BA7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 782256B224A28E2100FB2BA7;
+					};
+				};
+			};
+			buildConfigurationList = 782256AE24A28E2100FB2BA7 /* Build configuration list for PBXProject "Replay Scorer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 782256AA24A28E2100FB2BA7;
+			packageReferences = (
+			);
+			productRefGroup = 782256B424A28E2100FB2BA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				782256B224A28E2100FB2BA7 /* Replay Scorer */,
+				782256C824A28E2300FB2BA7 /* Replay ScorerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		782256B124A28E2100FB2BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782256C324A28E2300FB2BA7 /* LaunchScreen.storyboard in Resources */,
+				782256C024A28E2300FB2BA7 /* Preview Assets.xcassets in Resources */,
+				782256BD24A28E2300FB2BA7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782256C724A28E2300FB2BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		782256AF24A28E2100FB2BA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B4252224DDCDA4009285D4 /* SummaryRowView.swift in Sources */,
+				0D56051624E4CD580032B7EB /* BenchHelperView.swift in Sources */,
+				78EEC35924DC781000025961 /* ScorerPickerView.swift in Sources */,
+				786278D924E1FB3700CD3D6F /* HelperView.swift in Sources */,
+				78EEC36124DC7F6200025961 /* GameSectionView.swift in Sources */,
+				78EEC35724DC760300025961 /* ScorerToggleView.swift in Sources */,
+				78EEC35424DC759B00025961 /* ScorerView.swift in Sources */,
+				78AE7EDC24E199F900CA5644 /* PrecisionHelperView.swift in Sources */,
+				789E868324E0E05500BE33A3 /* TireFlipHelperView.swift in Sources */,
+				789E868524E0E1A300BE33A3 /* CellPhoneHelperView.swift in Sources */,
+				78B4251F24DDB6F1009285D4 /* AboutView.swift in Sources */,
+				789E868924E0E6C400BE33A3 /* RowMachineHelperView.swift in Sources */,
+				78B4251524DDAF24009285D4 /* ImageModifier.swift in Sources */,
+				78AE7EDF24E1BBB400CA5644 /* MissionScorerView.swift in Sources */,
+				789E868724E0E2B400BE33A3 /* TreadmillHelperView.swift in Sources */,
+				78572B2E24E44E8F0042A7E0 /* MultiColorTextView.swift in Sources */,
+				783D6D4224E0832100CC3236 /* BasketballHelperView.swift in Sources */,
+				782256B724A28E2100FB2BA7 /* AppDelegate.swift in Sources */,
+				78AE7EDA24E1993B00CA5644 /* HealthUnitsHelperView.swift in Sources */,
+				783D6D3C24E07F7B00CC3236 /* StepCounterHelperView.swift in Sources */,
+				789E867F24E0D63900BE33A3 /* RobotDanceHelperView.swift in Sources */,
+				78AE7ED824E195DD00CA5644 /* WeightMachineHelperView.swift in Sources */,
+				78C2A12224DF7A6F0095D7B6 /* InspectionHelperView.swift in Sources */,
+				78B4251C24DDB550009285D4 /* SettingsRowView.swift in Sources */,
+				78B4251724DDB32B009285D4 /* ScoreSummaryView.swift in Sources */,
+				7828CC6124DE3185002C7D0E /* ScorerPickerImageView.swift in Sources */,
+				789E868124E0DAF100BE33A3 /* BocciaHelperView.swift in Sources */,
+				78EEC35C24DC792900025961 /* Constants.swift in Sources */,
+				782256B924A28E2100FB2BA7 /* SceneDelegate.swift in Sources */,
+				789E867D24E0CE4A00BE33A3 /* PullUpHelperView.swift in Sources */,
+				78EEC36424DC7FCC00025961 /* Scorer.swift in Sources */,
+				78EEC35E24DC7A9700025961 /* ScorerStepperView.swift in Sources */,
+				783D6D3E24E0804300CC3236 /* SlideHelperView.swift in Sources */,
+				78AE7EE424E1D2C300CA5644 /* SectionHeaderView.swift in Sources */,
+				78C2A12424DF9B990095D7B6 /* InnovationHelperView.swift in Sources */,
+				782256BB24A28E2100FB2BA7 /* ContentView.swift in Sources */,
+				78B4251A24DDB4D0009285D4 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		782256C524A28E2300FB2BA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				782256CE24A28E2300FB2BA7 /* Replay_ScorerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		782256CB24A28E2300FB2BA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 782256B224A28E2100FB2BA7 /* Replay Scorer */;
+			targetProxy = 782256CA24A28E2300FB2BA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		782256C124A28E2300FB2BA7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				782256C224A28E2300FB2BA7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		782256D024A28E2300FB2BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		782256D124A28E2300FB2BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		782256D324A28E2300FB2BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Replay Scorer/Replay Scorer.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Replay Scorer/Preview Content\"";
+				DEVELOPMENT_TEAM = N9JN6V2956;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Replay Scorer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.havishnetla.RePLAY-Scorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		782256D424A28E2300FB2BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Replay Scorer/Replay Scorer.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Replay Scorer/Preview Content\"";
+				DEVELOPMENT_TEAM = N9JN6V2956;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Replay Scorer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.havishnetla.RePLAY-Scorer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		782256D624A28E2300FB2BA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Replay ScorerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.havish.Replay-ScorerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replay Scorer.app/Replay Scorer";
+			};
+			name = Debug;
+		};
+		782256D724A28E2300FB2BA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Replay ScorerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.havish.Replay-ScorerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Replay Scorer.app/Replay Scorer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		782256AE24A28E2100FB2BA7 /* Build configuration list for PBXProject "Replay Scorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782256D024A28E2300FB2BA7 /* Debug */,
+				782256D124A28E2300FB2BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782256D224A28E2300FB2BA7 /* Build configuration list for PBXNativeTarget "Replay Scorer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782256D324A28E2300FB2BA7 /* Debug */,
+				782256D424A28E2300FB2BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		782256D524A28E2300FB2BA7 /* Build configuration list for PBXNativeTarget "Replay ScorerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				782256D624A28E2300FB2BA7 /* Debug */,
+				782256D724A28E2300FB2BA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 782256AB24A28E2100FB2BA7 /* Project object */;
+}

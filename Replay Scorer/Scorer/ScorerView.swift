@@ -17,7 +17,7 @@ struct ScorerView: View {
             ZStack {
                 VStack {
                     List {
-                        Section(header: Text("Information").font(.headline)) {
+                        Section(header: Text("Information").font(.headline).foregroundColor(.primary)) {
                             HStack {
                                 Image(systemName: "info.circle.fill")
                                     .iconModifier()
@@ -30,7 +30,7 @@ struct ScorerView: View {
                         MissionScorerView(scorer: $scorer)
                     }
                     .environment(\.horizontalSizeClass, .none)
-                    .navigationBarTitle("RePLAY Scorer")
+                    .navigationBarTitle("Cargo Connect")
                     .navigationBarItems(
                         leading: //Show Settings Button
                             Button(action: {

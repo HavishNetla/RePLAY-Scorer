@@ -16,9 +16,7 @@ struct ScorerPickerImageView: View {
     var description: String
     var options: [String]
     
-    var body: some View {
-        print("\(title) - \(options)")
-        
+    var body: some View {        
         return VStack(alignment: .leading) {
             Picker(title, selection: $bindingProperty) {
                 //Text("testing")

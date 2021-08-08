@@ -27,7 +27,7 @@ struct InspectionHelperView: View {
                 
                 Text("When you get to each match, remove all your equipment from any containers and show the referee you can fit it all in the small inspection space. See Rule 09 for details.").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             }
-        ))
+       ))
     }
 }
 

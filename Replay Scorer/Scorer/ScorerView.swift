@@ -29,32 +29,32 @@ struct ScorerView: View {
                         }
                         MissionScorerView(scorer: $scorer)
                     }
-                    .listStyle(GroupedListStyle())
-                    .environment(\.horizontalSizeClass, .regular)
-                    .navigationBarTitle("FLL RePLAY Scorer")
+                    .environment(\.horizontalSizeClass, .none)
+                    .navigationBarTitle("RePLAY Scorer")
                     .navigationBarItems(
                         leading: //Show Settings Button
-                        Button(action: {
-                            let generator = UINotificationFeedbackGenerator()
-
-                            generator.notificationOccurred(.success)
-                            
-                            self.scorer.reset()
-                        }) {
-                            Image(systemName: "arrow.counterclockwise").imageScale(.large)
-                        }
+                            Button(action: {
+                                let generator = UINotificationFeedbackGenerator()
+                                
+                                generator.notificationOccurred(.success)
+                                
+                                self.scorer.reset()
+                            }) {
+                                Image(systemName: "arrow.counterclockwise").imageScale(.large)
+                            },
                         
-                        //                        trailing:
-                        //                            Button(action: {
-                        //                                self.showingSettings.toggle()
-                        //                            }) {
-                        //                                Image(systemName: "gear").imageScale(.large)
-                        //                            }.sheet(isPresented: $showingSettings) {
-                        //                                SettingsView()
-                        //                            }
+                        trailing:
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                NavigationLink(destination: SettingsView()) {
+                                    
+                                    Image(systemName: "gear").imageScale(.large)
+                                }
+                            })
+                            
+                            
                     )
-                        .onAppear {
-                            self.updateScorerAssist()
+                    .onAppear {
+                        self.updateScorerAssist()
                     }
                     Spacer()
                         .frame(height: 50)
@@ -68,22 +68,23 @@ struct ScorerView: View {
                         label: "Total Points",
                         image: Image(systemName: "t.circle.fill")
                     )
-                        .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
-                        .background(Color.green)
-                        .cornerRadius(10.0)
-                        .shadow(color: .green, radius: 7, x: 0.0, y: 0.0)
-                        .contextMenu(ContextMenu(menuItems: {
-                            Button(action: {
-                                self.scorer.reset()
-                            }) {
-                                Text("Reset")
-                                Image(systemName: "arrow.counterclockwise")
-                            }
-                        }))
+                    .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
+                    .background(Color.green)
+                    .cornerRadius(10.0)
+                    .shadow(color: .green, radius: 7, x: 0.0, y: 0.0)
+                    .contextMenu(ContextMenu(menuItems: {
+                        Button(action: {
+                            self.scorer.reset()
+                        }) {
+                            Text("Reset")
+                            Image(systemName: "arrow.counterclockwise")
+                        }
+                    }))
                 }
-                .padding(.horizontal)
+                .padding()
             }
         }
+        
     }
     
     private func updateScorerAssist() {

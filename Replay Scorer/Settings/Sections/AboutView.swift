@@ -10,27 +10,27 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        List {
-            Section() {
-                Text("About RePLAY Scorer")
-                    .font(.system(size: 28))
+        VStack {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("About the Developer").font(.system(size: 18))
                     .bold()
-                    .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-            }
-
-            Section() {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text("👋 Hey, I'm Havish Netla, a highschool developer")
-                    
-                    Group {
-                        Text("Im currently the coach of FLL Team ") +
-                            Text("#37840 Mystical Geniuses").foregroundColor(Color(UIColor.systemIndigo)).bold()
-                    }
+                
+                Text("👋 Hey, I'm Havish Netla, a highschool developer")
+                
+                Group {
+                    Text("I'm currently the coach of FLL Team ") +
+                        Text("#37840 Mystical Geniuses.").foregroundColor(Color(UIColor.systemIndigo)).bold()
                 }
+                
+                Text("About the App").font(.system(size: 18))
+                    .bold().padding(.top)
+                Text("The scorer automatically detects \"impossible\" situations and automatically corrects them. If you think there is something wrong with the scoring algorithm, please contact me.")
             }
+            
+            Spacer()
+            
         }
-        .listStyle(GroupedListStyle())
-        .environment(\.horizontalSizeClass, .regular)
+        .padding()
         .navigationBarTitle("About", displayMode: .inline)
     }
 }

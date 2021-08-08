@@ -7,35 +7,105 @@
 //
 
 import SwiftUI
+//https://apps.apple.com/ee/app/replay-scorer/id1527485419
+import StoreKit
 
 struct SettingsView: View {
-    var body: some View {
-        NavigationView {
-            List {
-                Section(header: Text("Info").font(.headline)) {
-                    SettingsRowView(
-                        image: Image(systemName: "square.and.arrow.up"),
-                        imageColor: Color.blue,
-                        title: "Share RePlay scorer",
-                        showChevron: true
-                    )
-                    ZStack {
-                        SettingsRowView(
-                            image: Image(systemName: "info.circle.fill"),
-                            imageColor: Color.blue,
-                            title: "About",
-                            showChevron: true
-                        )
-                        NavigationLink(destination: AboutView()) {
-                            EmptyView()
-                        }
+    var list: some View {
+        List {
+            Section {
+//            NavigationLink(destination: AboutView()) {
+//                SettingsRowView(
+//                    image: "info.circle.fill",
+//                    imageColor: .white,
+//                    bgColor: .green,
+//                    title: "About"
+//                )
+//            }
+                
+            Button(action: {
+                guard let urlShare = URL(string: "https://apps.apple.com/ee/app/replay-scorer/id1527485419") else { return }
+                        let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+                
+                        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+
+            }, label: {
+                SettingsRowView(
+                    image: "square.and.arrow.up",
+                    imageColor: .white,
+                    bgColor: .orange,
+                    title: "Share RePlay Scorer"
+                )
+            })
+            
+            
+            Button(action: {
+                print("test")
+                if let url = URL(string: "mailto:netlahavish@gmail.com?subject=Feedback") {
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url)
+                        print("asd")
+                    } else {
+                        UIApplication.shared.openURL(url)
+                        print("asd1")
                     }
                 }
-                
+            }, label: {
+                SettingsRowView(
+                    image: "at",
+                    imageColor: .white,
+                    bgColor: .blue,
+                    title: "Contact"
+                )
+            })
+            
+            SettingsRowView(
+                image: "star.fill",
+                imageColor: .white,
+                bgColor: .yellow,
+                title: "Rate RePlay Scorer"
+            ).onTapGesture {
+                rateApp()
             }
-            .listStyle(GroupedListStyle())
-            .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Settings")
+            
+            }
+            
+            HStack(alignment: .center, content: {
+                Spacer()
+                Text("Created by Havish Netla")
+                Spacer()
+            })
+            
+        }.navigationBarTitle("Settings", displayMode: .inline)
+    }
+    
+    var body: some View {
+        
+        if #available(iOS 14.0, *) {
+            list
+                .listStyle(InsetGroupedListStyle())
+                .environment(\.horizontalSizeClass, .regular)
+            
+            
+            //.navigationBarTitle("Settings", displayMode: .inline)
+        } else {
+            list
+                .listStyle(GroupedListStyle())
+                .environment(\.horizontalSizeClass, .regular)
+            
+            
+            //.navigationBarTitle("Settings", displayMode: .inline)
+            
+        }
+        
+    }
+    
+    func rateApp() {
+        if #available(iOS 10.3, *) {
+            SKStoreReviewController.requestReview()
+            
+        } else if let url = URL(string: "itms-apps://itunes.apple.com/app/" + "1527485419") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }

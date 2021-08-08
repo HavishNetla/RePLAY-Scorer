@@ -20,7 +20,7 @@ struct SectionHeaderView: View {
     private var labelText: String = ""
     private var missionName: String = ""
     
-    func getHelperView() -> AnyView {
+    var helperView: some View {
         switch missionNumber {
         case 0:
             return AnyView(InspectionHelperView())
@@ -70,13 +70,11 @@ struct SectionHeaderView: View {
         self.labelText = x[0]
         x.remove(at: 0)
         
-        self.missionName = x.joined(separator: " ")
-        
-        //print(helperView)
+        self.missionName = x.joined(separator: " ")        
     }
     var body: some View {
         HStack {
-            NavigationLink(destination: getHelperView()) {
+            NavigationLink(destination: helperView) {
                 HStack {
                     Text(labelText).font(.headline)
                         .padding(EdgeInsets(top: 2, leading: 5, bottom: 2, trailing: 5))
@@ -84,13 +82,16 @@ struct SectionHeaderView: View {
                         .cornerRadius(5.0)
                         .foregroundColor(.white)
                     
-                    Text("\(missionName): ").font(.headline)
+                    Text("\(missionName): ")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+
                     Text("\(score)").font(.headline)
                         .foregroundColor(
                             colorScheme == .dark ?
                                 Color.white :
                                 Color.black
-                    )
+                        )
                     
                 }
             }

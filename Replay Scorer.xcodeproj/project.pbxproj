@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D56051624E4CD580032B7EB /* BenchHelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D56051524E4CD580032B7EB /* BenchHelperView.swift */; };
+		78206D1C26BF1BDD008D1660 /* SquareIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78206D1B26BF1BDD008D1660 /* SquareIconView.swift */; };
 		782256B724A28E2100FB2BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256B624A28E2100FB2BA7 /* AppDelegate.swift */; };
 		782256B924A28E2100FB2BA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256B824A28E2100FB2BA7 /* SceneDelegate.swift */; };
 		782256BB24A28E2100FB2BA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782256BA24A28E2100FB2BA7 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		0D56051524E4CD580032B7EB /* BenchHelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchHelperView.swift; sourceTree = "<group>"; };
+		78206D1B26BF1BDD008D1660 /* SquareIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconView.swift; sourceTree = "<group>"; };
 		782256B324A28E2100FB2BA7 /* Replay Scorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Replay Scorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		782256B624A28E2100FB2BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		782256B824A28E2100FB2BA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				78B4251D24DDB6DD009285D4 /* Sections */,
 				78B4251924DDB4D0009285D4 /* SettingsView.swift */,
 				78B4251B24DDB550009285D4 /* SettingsRowView.swift */,
+				78206D1B26BF1BDD008D1660 /* SquareIconView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				78EEC35E24DC7A9700025961 /* ScorerStepperView.swift in Sources */,
 				783D6D3E24E0804300CC3236 /* SlideHelperView.swift in Sources */,
 				78AE7EE424E1D2C300CA5644 /* SectionHeaderView.swift in Sources */,
+				78206D1C26BF1BDD008D1660 /* SquareIconView.swift in Sources */,
 				78C2A12424DF9B990095D7B6 /* InnovationHelperView.swift in Sources */,
 				782256BB24A28E2100FB2BA7 /* ContentView.swift in Sources */,
 				78B4251A24DDB4D0009285D4 /* SettingsView.swift in Sources */,
@@ -591,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.havishnetla.RePLAY-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -619,7 +623,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.havishnetla.RePLAY-Scorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

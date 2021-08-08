@@ -18,8 +18,7 @@ struct HelperView: View {
                 view
             }
         }
-        .listStyle(GroupedListStyle())
-        .environment(\.horizontalSizeClass, .regular)
+        .environment(\.horizontalSizeClass, .none)
         .navigationBarTitle(title)
     }
 }

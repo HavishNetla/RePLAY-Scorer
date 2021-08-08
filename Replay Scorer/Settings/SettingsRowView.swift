@@ -9,32 +9,25 @@
 import SwiftUI
 
 struct SettingsRowView: View {
-    var image: Image
+    var image: String
     var imageColor: Color
+    var bgColor: Color
+    
     var title: String
-    var showChevron: Bool
     
     var body: some View {
         HStack {
-            image
-                .iconModifier()
-                .foregroundColor(imageColor)
+            SquareIconView(image: image, color: bgColor, stroke: imageColor)
+
 
             Text(title)
                 .foregroundColor(.primary)
-
-            Spacer()
-
-            if showChevron {
-                Image(systemName: "chevron.right")
-                    .foregroundColor(Color(UIColor.systemGray))
-            }
         }
     }
 }
 
 struct SettingsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsRowView(image: Image(systemName: "info.circle.fill"), imageColor: Color.orange, title: "About", showChevron: true)
+        SettingsRowView(image: "at", imageColor: Color.orange, bgColor: .blue, title: "About")
     }
 }

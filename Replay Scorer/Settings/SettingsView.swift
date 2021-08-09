@@ -14,60 +14,60 @@ struct SettingsView: View {
     var list: some View {
         List {
             Section {
-//            NavigationLink(destination: AboutView()) {
-//                SettingsRowView(
-//                    image: "info.circle.fill",
-//                    imageColor: .white,
-//                    bgColor: .green,
-//                    title: "About"
-//                )
-//            }
+                //            NavigationLink(destination: AboutView()) {
+                //                SettingsRowView(
+                //                    image: "info.circle.fill",
+                //                    imageColor: .white,
+                //                    bgColor: .green,
+                //                    title: "About"
+                //                )
+                //            }
                 
-            Button(action: {
-                guard let urlShare = URL(string: "https://apps.apple.com/ee/app/replay-scorer/id1527485419") else { return }
-                        let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+                Button(action: {
+                    guard let urlShare = URL(string: "https://apps.apple.com/ee/app/replay-scorer/id1527485419") else { return }
+                    let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+                    
+                    UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+                    
+                }, label: {
+                    SettingsRowView(
+                        image: "square.and.arrow.up",
+                        imageColor: .white,
+                        bgColor: .orange,
+                        title: "Share RePlay Scorer"
+                    )
+                })
                 
-                        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
-
-            }, label: {
-                SettingsRowView(
-                    image: "square.and.arrow.up",
-                    imageColor: .white,
-                    bgColor: .orange,
-                    title: "Share RePlay Scorer"
-                )
-            })
-            
-            
-            Button(action: {
-                print("test")
-                if let url = URL(string: "mailto:netlahavish@gmail.com?subject=Feedback") {
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(url)
-                        print("asd")
-                    } else {
-                        UIApplication.shared.openURL(url)
-                        print("asd1")
+                
+                Button(action: {
+                    print("test")
+                    if let url = URL(string: "mailto:netlahavish@gmail.com?subject=Feedback") {
+                        if #available(iOS 10.0, *) {
+                            UIApplication.shared.open(url)
+                            print("asd")
+                        } else {
+                            UIApplication.shared.openURL(url)
+                            print("asd1")
+                        }
                     }
-                }
-            }, label: {
+                }, label: {
+                    SettingsRowView(
+                        image: "at",
+                        imageColor: .white,
+                        bgColor: .blue,
+                        title: "Contact"
+                    )
+                })
+                
                 SettingsRowView(
-                    image: "at",
+                    image: "star.fill",
                     imageColor: .white,
-                    bgColor: .blue,
-                    title: "Contact"
-                )
-            })
-            
-            SettingsRowView(
-                image: "star.fill",
-                imageColor: .white,
-                bgColor: .yellow,
-                title: "Rate RePlay Scorer"
-            ).onTapGesture {
-                rateApp()
-            }
-            
+                    bgColor: .yellow,
+                    title: "Rate RePlay Scorer"
+                ).onTapGesture {
+                    rateApp()
+                }
+                
             }
             
             HStack(alignment: .center, content: {
@@ -101,7 +101,7 @@ struct SettingsView: View {
     }
     
     func rateApp() {
-        if #available(iOS 10.3, *) {
+        if false {
             SKStoreReviewController.requestReview()
             
         } else if let url = URL(string: "itms-apps://itunes.apple.com/app/" + "1527485419") {

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SummaryView: View {
     @Environment(\.colorScheme) var colorScheme
-
+    
     var scorer: Scorer
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5, content: {
+            Text(getDate()).font(.caption2).opacity(0.5)
             Group {
                 MissionLabel(labelText: "M00", name: "Equipment Inspection Bonus", score: scorer.equipmentInspectionBonus.totalPoints)
                 MissionLabel(labelText: "M01", name: "Innovation Project", score: scorer.innovationProject.totalPoints)
@@ -44,19 +45,30 @@ struct SummaryView: View {
             .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
             .background(Color.green)
             .cornerRadius(10.0)
+            .shadow(color: .green, radius: 7, x: 0.0, y: 0.0)
             .padding(.top)
             
             HStack {
                 Spacer()
-                Ad().padding()
+                Footer().padding(.top)
             }
             
         })
         .padding()
         .background(colorScheme == .dark ?
-                                    Color.black :
-                                    Color.white)
+                        Color.black :
+                        Color.white)
     }
+    
+    func getDate() -> String {
+        let time = Date()
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "MMM d, yyyy, h:mm a"
+        let stringDate = timeFormatter.string(from: time)
+        
+        return stringDate
+    }
+    
 }
 
 struct MissionLabel: View {
@@ -75,25 +87,26 @@ struct MissionLabel: View {
             Text("\(name): ")
                 .font(.headline)
                 .foregroundColor(.primary)
-
+            
             Text("\(score)").font(.headline)
                 .foregroundColor(.primary)
         }
     }
 }
 
-struct Ad: View {
+struct Footer: View {
     var body: some View {
         HStack {
-            Text("via Cargo Connect").font(.subheadline)
-            Image(uiImage: UIImage(named: "AppIcon") ?? UIImage()).cornerRadius(3).scaleEffect(1.15)
+            Text("via Cargo Connect").font(.caption)
+            Image(uiImage: UIImage(named: "AppIcon") ?? UIImage()).cornerRadius(3).scaleEffect(1.05)
         }.opacity(0.5)
     }
+    
+    
 }
 
 struct SummaryView_Previews: PreviewProvider {
     static var previews: some View {
         SummaryView(scorer: Scorer())
-        Ad()
     }
 }

@@ -13,7 +13,7 @@ struct SummaryRowView: View {
     
     var label: String
     var image: Image
-    
+        
     var body: some View {
         HStack {
             image
@@ -23,14 +23,13 @@ struct SummaryRowView: View {
             Text("\(score)")
                 .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing)
-            
         }
     }
 }
 
-struct SummaryRowView_Previews: PreviewProvider {
-    @State static var score = 69
-    static var previews: some View {
-        SummaryRowView(score: score, label: "Total Points", image: Image(systemName: "t.circle.fill"))
-    }
-}
+//struct SummaryRowView_Previews: PreviewProvider {
+//    @State static var score = 69
+//    static var previews: some View {
+//        //SummaryRowView(score: score, label: "Total Points", image: Image(systemName: "t.circle.fill"))
+//    }
+//}

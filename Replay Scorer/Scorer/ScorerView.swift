@@ -7,10 +7,14 @@
 //
 
 import SwiftUI
+import SPAlert
 
 struct ScorerView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @State var scorer = Scorer()
     @State var showingSettings = false
+    @State var showingPreview = false
     
     var test : some View {
         Text("Hello, SwiftUI")
@@ -75,11 +79,32 @@ struct ScorerView: View {
                 
                 VStack {
                     Spacer()
-                    SummaryRowView(
-                        score: scorer.totalPoints,
-                        label: "Total Points",
-                        image: Image(systemName: "t.circle.fill")
-                    )
+                    HStack {
+                        Image(systemName: "t.circle.fill")
+                            .iconModifier()
+                        
+                        Text("Total Points").bold()
+                        Text("\(scorer.totalPoints)")
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .trailing)
+                            //.padding(.trailing)
+                        
+                        Button(action: {
+                            let image = test1.snapshot()
+                            
+//                            let activityVC = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+//
+//                            UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+                            
+                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+
+                            SPAlert.present(title: "Saved to Photos", preset: .done)
+                            
+                            //showingPreview = true
+                        }) {
+                            Image(systemName: "square.and.arrow.down").iconModifier().foregroundColor(.primary)
+                        }
+                        
+                    }
                     .padding(EdgeInsets(top: 15, leading: 10, bottom: 15, trailing: 10))
                     .background(Color.green)
                     .cornerRadius(10.0)
@@ -103,7 +128,11 @@ struct ScorerView: View {
                 }
                 .padding()
             }
-        }
+        }.sheet(isPresented: $showingPreview, content: {
+            SaveSummaryPreviewView(scorer: scorer, themeSelection: colorScheme == .dark ?
+                                    "Dark" :
+                                    "Light")
+        })
         
     }
     

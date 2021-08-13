@@ -34,7 +34,7 @@ struct SettingsView: View {
                         image: "square.and.arrow.up",
                         imageColor: .white,
                         bgColor: .orange,
-                        title: "Share RePlay Scorer"
+                        title: "Share Cargo Connect"
                     )
                 })
                 
@@ -63,7 +63,7 @@ struct SettingsView: View {
                     image: "star.fill",
                     imageColor: .white,
                     bgColor: .yellow,
-                    title: "Rate RePlay Scorer"
+                    title: "Rate Cargo Connect"
                 ).onTapGesture {
                     rateApp()
                 }

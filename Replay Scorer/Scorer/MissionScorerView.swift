@@ -28,7 +28,9 @@ struct MissionScorerView: View {
     @State var showing13Helper = false
     @State var showing14Helper = false
     @State var showing15Helper = false
-    
+    @State var showing16Helper = false
+    @State var showing17Helper = false
+
     var body: some View {
         Group {
             Group {
@@ -38,294 +40,313 @@ struct MissionScorerView: View {
                     ScorerToggleView(
                         bindingProperty: $scorer.equipmentInspectionBonus.fits,
                         image: Image(systemName: "rectangle.fill"),
-                        title: "Equipment fits",
-                        description:
-                            """
-                        If your Innovation Project: \n
-                        • Is made of at least two white LEGO pieces\n
-                        • Measures at least as long as four LEGO studs in at
-                        least one direction \n
-                        • Has any part of it touching either the RePLAY logo or
-                        the gray area around the bench: 20 max
-                    """
+                        title: "Equipment fits"
                     )
                 }
                 
                 Section(header:
                             SectionHeaderView(showing: $showing1Helper, score: scorer.innovationProject.totalPoints, name: "M01 Innovation Project", missionNumber: 1)
                 ) {
-//                    ScorerToggleView(
-//                        bindingProperty: $scorer.innovationProject.size,
-//                        image: Image(systemName: "crop"),
-//                        title: "Large enough",
-//                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-//                    )
                     
-                    ScorerPickerView(
+                    ScorerToggleView(
                         bindingProperty: $scorer.innovationProject.touching,
                         image: Image(systemName: "rectangle.on.rectangle"),
-                        title: "Partly touching",
-                        description: "Part of the innovation Project is touching",
-                        options: ["None", "RePlay Logo", "Bench Gray Area"]
+                        title: "Partly Touching the CARGO CONNECT Circle"
                     )
                 }
                 
                 Section(header:
-                            SectionHeaderView(showing: $showing2Helper, score: scorer.stepCounter.totalPoints, name: "M02 Step Counter", missionNumber: 2)
-                ) {
-                    ScorerPickerView(
-                        bindingProperty: $scorer.stepCounter.pointerLocation,
-                        image: Image(systemName: "arrowtriangle.up.fill"),
-                        title: "The bottom of the pointer is on",
-                        description: "The bottom of the pointer is on",
-                        options: ["None", "Magenta", "Yellow", "Blue"]
-                    )
-                }
-                
-                Section(header:
-                            SectionHeaderView(showing: $showing3Helper, score: scorer.slide.totalPoints, name: "M03 Slide", missionNumber: 3)
-                ) {
-                    ScorerPickerView(
-                        bindingProperty: $scorer.slide.slideFigures,
-                        image: Image(systemName: "person.fill"),
-                        title: "Number of figures off the slide",
-                        description: "The bottom of the pointer is on",
-                        options: ["0", "1", "2"]
-                    )
-                    
-                    ScorerToggleView(
-                        bindingProperty: $scorer.slide.home,
-                        image: Image(systemName: "house.fill"),
-                        title: "A slide figure is home",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-                    ScorerToggleView(
-                        bindingProperty: $scorer.slide.heldByTire,
-                        image: Image(systemName: "smallcircle.fill.circle.fill"),
-                        title: "A slide figure is held by the tire",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                }
-                
-                Section(header:
-                            SectionHeaderView(showing: $showing4Helper, score: scorer.bench.totalPoints, name: "M04 Bench", missionNumber: 4))
-                {
-                    ScorerToggleView(
-                        bindingProperty: $scorer.bench.flat,
-                        image: Image(systemName: "line.horizontal.3"),
-                        title: "Bench flat",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-                    ScorerPickerView(
-                        bindingProperty: $scorer.bench.spacesWCubes,
-                        image: Image(systemName: "cube.fill"),
-                        title: "Hopscotch spaces with cubes inside",
-                        description: "The bottom of the pointer is on",
-                        options: ["0", "1", "2", "3", "4"]
-                    )
-                    
-                    ScorerToggleView(
-                        bindingProperty: $scorer.bench.backrest,
-                        image: Image(systemName: "square.split.1x2.fill"),
-                        title: "Backrest is out",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                }
-                
-                Section(header: SectionHeaderView(showing: $showing5Helper, score: scorer.basketball.totalPoints, name: "M05 Basketball", missionNumber: 5)) {
-                    ScorerToggleView(
-                        bindingProperty: $scorer.basketball.inCrate,
-                        image: Image(systemName: "cube.fill"),
-                        title: "Cube in the crate", color: Color.orange,
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-                    ScorerPickerView(
-                        bindingProperty: $scorer.basketball.whiteStopper,
-                        image: Image(systemName: "arrowtriangle.right.fill"),
-                        title: "Which stopper is the crate on",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long",
-                        options: ["None", "Middle", "Top"]
-                        
-                    )
-                }
-                
-                Section(header:
-                            SectionHeaderView(showing: $showing6Helper, score: scorer.pullUpBar.totalPoints, name: "M06 Pull-Up Bar", missionNumber: 6)
+                            SectionHeaderView(showing: $showing2Helper, score: scorer.unusedCapacity.totalPoints, name: "M02 Unused Capacity", missionNumber: 2)
                 ) {
                     ScorerToggleView(
-                        bindingProperty: $scorer.pullUpBar.passed,
-                        image: Image(systemName: "house.fill"),
-                        title: "Robot passed through bar",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-                    ScorerToggleView(
-                        bindingProperty: $scorer.pullUpBar.holds,
-                        image: Image(systemName: "house.fill"),
-                        title: "Robot held by bar",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-                }
-                
-                Section(header:
-                            SectionHeaderView(showing: $showing7Helper, score: scorer.robotDance.totalPoints, name: "M07 Robot Dance", missionNumber: 7)
-                ) {
-                    ScorerToggleView(
-                        bindingProperty: $scorer.robotDance.dancing,
-                        image: Image(systemName: "circle.grid.3x3.fill"),
-                        title: "Robot is dancing on the dance floor at the end of the match",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                }
-                
-                Section(header:
-                            SectionHeaderView(showing: $showing8Helper, score: scorer.boccia.totalPoints, name: "M08 Boccia", missionNumber: 8)
-                ) {
-                    ScorerToggleView(
-                        bindingProperty: $scorer.boccia.colorMatchCube,
-                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
-                        title: "Both share models have sent only one cube anywhere onto the opposing field and those cubes color-match each other", color: Color.green,
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
+                        bindingProperty: $scorer.unusedCapacity.closed,
+                        image: Image(systemName: "rectangle.on.rectangle"),
+                        title: "Hinged container closed"
                     )
                     
                     ScorerStepperView(
-                        bindingProperty: $scorer.boccia.numCubes,
+                        bindingProperty: $scorer.unusedCapacity.fillAmmount,
                         image: Image(systemName: "square.grid.4x3.fill"),
-                        title: "Cubes in frame or target",
-                        description: "asd",
-                        bounds: 0...18
+                        title: "Pieces in the container",
+                        bounds: 0...6
                     )
-                    
-                    ScorerToggleView(
-                        bindingProperty: $scorer.boccia.yellowInTarget,
-                        image: Image(systemName: "cube.fill"),
-                        title: "At least one yellow cube is completely in the target", color: Color.yellow,
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-                    )
-                    
-//                    ScorerToggleView(
-//                        bindingProperty: $scorer.boccia.partlyInFrame,
-//                        image: Image(systemName: "rectangle.fill.on.rectangle.fill"),
-//                        title: "Any equipment is in the frame (even partly)",
-//                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-//                    )
                 }
                 
                 Section(header:
-                            SectionHeaderView(showing: $showing9Helper, score: scorer.tireFlip.totalPoints, name: "M09 Tire Flip", missionNumber: 9)
+                            SectionHeaderView(showing: $showing3Helper, score: scorer.unloadCargoPlane.totalPoints, name: "M03 Unload Cargo Plane", missionNumber: 3)
                 ) {
-                    ScorerPickerView(
-                        bindingProperty: $scorer.tireFlip.whiteSideUp,
-                        image: Image(systemName: "circle.fill"),
-                        title: "Tires white side up",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long",
-                        options: ["None", "Blue", "Black", "Both"]
-                        
-                    )
-                    ScorerPickerView(
-                        bindingProperty: $scorer.tireFlip.inLargeCircle,
-                        image: Image(systemName: "smallcircle.fill.circle"),
-                        title: "Tires completely in the large target circle",
-                        description: "2+ white LEGO pieces and 4+ LEGO studs long",
-                        options: ["None", "Blue", "Black", "Both"]
+                    ScorerToggleView(
+                        bindingProperty: $scorer.unloadCargoPlane.doorTouching,
+                        image: Image(systemName: "house.fill"),
+                        title: "Cargo door is completely down"
                     )
                     
-//                    ScorerToggleView(
-//                        bindingProperty: $scorer.tireFlip.crossFlip,
-//                        image: Image(systemName: "square.and.line.vertical.and.square.fill"),
-//                        title: "The heavy (black tread) tire crossed the flip line (even partly) at any time",
-//                        color: Color.black,
-//                        description: "2+ white LEGO pieces and 4+ LEGO studs long"
-//                    )
+                    ScorerToggleView(
+                        bindingProperty: $scorer.unloadCargoPlane.containerSeperate,
+                        image: Image(systemName: "smallcircle.fill.circle.fill"),
+                        title: "Container is completely seperate"
+                    )
+                }
+                
+                Section(header:
+                            SectionHeaderView(showing: $showing4Helper, score: scorer.transportationJourney.totalPoints, name: "M04 Transportation Journey", missionNumber: 4))
+                {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.transportationJourney.truckPastBlue,
+                        image: Image(systemName: "line.horizontal.3"),
+                        title: "Truck past blue end line"
+                    )
+                    
+                    ScorerToggleView(
+                        bindingProperty: $scorer.transportationJourney.airplanePastBlue,
+                        image: Image(systemName: "line.horizontal.3"),
+                        title: "Airplane past blue end line"
+                    )
+                }
+                
+                Section(header: SectionHeaderView(showing: $showing5Helper, score: scorer.switchEngine.totalPoints, name: "M05 Switch Engine", missionNumber: 5)) {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.switchEngine.yellowDown,
+                        image: Image(systemName: "cube.fill"),
+                        title: "Yellow bar down",
+                        color: Color.yellow
+                    )
+                }
+                
+                Section(header:
+                            SectionHeaderView(showing: $showing6Helper, score: scorer.accidentAvoidance.totalPoints, name: "M06 Accident Avoidance", missionNumber: 6)
+                ) {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.accidentAvoidance.parked,
+                        image: Image(systemName: "house.fill"),
+                        title: "Robot parked over blue accident-avoidance line"
+                    )
+                    
+                    ScorerPickerView(
+                        bindingProperty: $scorer.accidentAvoidance.panelState,
+                        image: Image(systemName: "house.fill"),
+                        title: "Yellow panel is",
+                        color: Color.yellow,
+                        options: ["Not knocked down", "Knocked down"])
+                    
+                }
+                
+                Section(header:
+                            SectionHeaderView(showing: $showing7Helper, score: scorer.unloadCargoShip.totalPoints, name: "M07 Unload Cargo Ship", missionNumber: 7)
+                ) {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.unloadCargoShip.touching,
+                        image: Image(systemName: "circle.grid.3x3.fill"),
+                        title: "Container not touching cargo ship's east deck"
+                    )
+                    
+                    ScorerToggleView(
+                        bindingProperty: $scorer.unloadCargoShip.east,
+                        image: Image(systemName: "circle.grid.3x3.fill"),
+                        title: "Container completely east of cargo ship's east deck"
+                    )
+                    
+                    
+                }
+                
+                Section(header:
+                            SectionHeaderView(showing: $showing8Helper, score: scorer.airDrop.totalPoints, name: "M08 Air Drop", missionNumber: 8)
+                ) {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.airDrop.yourFoodSeperated,
+                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
+                        title: "Food package is seperated from helicopter",
+                        color: Color.yellow
+                    )
+                    
+                    ScorerToggleView(
+                        bindingProperty: $scorer.airDrop.otherFoodInCircle,
+                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
+                        title: "Other field's food package is completley in your CARGO CONNECT circle",
+                        color: Color.yellow
+                    )
+                    
+                    ScorerToggleView(
+                        bindingProperty: $scorer.airDrop.bothSeperated,
+                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
+                        title: "Both teams have seperated their food packages",
+                        color: Color.yellow
+                    )
+                }
+                
+                Section(header:
+                            SectionHeaderView(showing: $showing9Helper, score: scorer.trainTracks.totalPoints, name: "M09 Train Tracks", missionNumber: 9)
+                ) {
+                    ScorerToggleView(
+                        bindingProperty: $scorer.trainTracks.restsDown,
+                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
+                        title: "Train track rests completely down/west"
+                    )
+                    ScorerToggleView(
+                        bindingProperty: $scorer.trainTracks.reached,
+                        image: Image(systemName: "square.fill.and.line.vertical.square.fill"),
+                        title: "Train has latched at the end of the tracks"
+                    )
                 }
             }
             
             Section(header:
-                        SectionHeaderView(showing: $showing10Helper, score: scorer.cellPhone.totalPoints, name: "M10 Cell Phone", missionNumber: 10)
+                        SectionHeaderView(showing: $showing10Helper, score: scorer.sortingCenter.totalPoints, name: "M10 Sorting Center", missionNumber: 10)
             ) {
                 ScorerToggleView(
-                    bindingProperty: $scorer.cellPhone.whiteUp,
+                    bindingProperty: $scorer.sortingCenter.sorted,
                     image: Image(systemName: "phone.down.fill"),
-                    title: "The cell phone is resting white side up",
-                    description: "asdasdasdasdasdasdasdasdasdasd"
+                    title: "Light orange container is the only container completely in the blue sorting area box"
                 )
                 
             }
             
             Section(header:
-                        SectionHeaderView(showing: $showing12Helper, score: scorer.treadmill.totalPoints, name: "M11 Treadmill", missionNumber: 11)
-            ) {
-                ScorerPickerImageView(
-                    bindingProperty: $scorer.treadmill.rollerColor,
-                    image: Image(systemName: "hand.point.right.fill"),
-                    title: "The robot spun the rollers so the pointer points to",
-                    description: "asdasdasdasdasdasdasdasdasdasd",
-                    options: ["None", "Gray", "Red", "Orange", "Yellow", "Light Green", "Dark Green"]
-                )
-                
-            }
-            
-            Section(header:
-                        SectionHeaderView(showing: $showing12Helper, score: scorer.rowMachine.totalPoints, name: "M12 Row Machine", missionNumber: 12)
-            ) {
-                ScorerToggleView(
-                    bindingProperty: $scorer.rowMachine.outLarge,
-                    image: Image(systemName: "smallcircle.fill.circle"),
-                    title: "Free wheel is outside the large circle",
-                    description: "asdasdasdasdasdasdasdasdasdasd"
-                )
-                
-                ScorerToggleView(
-                    bindingProperty: $scorer.rowMachine.inSmall,
-                    image: Image(systemName: "smallcircle.fill.circle.fill"),
-                    title: "Free wheel is in the small circle",
-                    description: "asdasdasdasdasdasdasdasdasdasd"
-                )
-            }
-            
-            Section(header:
-                        SectionHeaderView(showing: $showing13Helper, score: scorer.weightMachine.totalPoints, name: "M13 Weight Machine", missionNumber: 13)
+                        SectionHeaderView(showing: $showing12Helper, score: scorer.homeDelivery.totalPoints, name: "M11 Home Delivery", missionNumber: 11)
             ) {
                 ScorerPickerView(
-                    bindingProperty: $scorer.weightMachine.leverSetting,
-                    image: Image(systemName: "arrowtriangle.right.fill"),
-                    title: "The stopper is under the lever and the lever setting is",
-                    description: "2+ white LEGO pieces and 4+ LEGO studs long",
-                    options: ["None", "Blue", "Magenta", "Yellow"]
-                    
+                    bindingProperty: $scorer.homeDelivery.packageState,
+                    image: Image(systemName: "hand.point.right.fill"),
+                    title: "The package has been delivered on to the doorstep",
+                    options: ["None", "Partly", "Completely"]
+                )
+                
+            }
+            
+            Section(header:
+                        SectionHeaderView(showing: $showing12Helper, score: scorer.largeDelivery.totalPoints, name: "M12 Large Delivery", missionNumber: 12)
+            ) {
+                ScorerToggleView(
+                    bindingProperty: $scorer.largeDelivery.turbineTouchingHolder,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "Turbine blade is touching the blue holder"
+                )
+                ScorerPickerView(
+                    bindingProperty: $scorer.homeDelivery.packageState,
+                    image: Image(systemName: "hand.point.right.fill"),
+                    title: "Turbine blade is touching only the blue holder and",
+                    options: ["The Mat", "Nothing else", "Something else"]
+                )
+                
+                
+                ScorerToggleView(
+                    bindingProperty: $scorer.largeDelivery.chickenUp,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "Chicken statue is upright"
+                )
+                ScorerPickerView(
+                    bindingProperty: $scorer.largeDelivery.chickenPositionState,
+                    image: Image(systemName: "hand.point.right.fill"),
+                    title: "Base of the chicken statue is in the circle",
+                    options: ["None", "Partly", "Completely"]
+                )
+                
+            }
+            
+            Section(header:
+                        SectionHeaderView(showing: $showing13Helper, score: scorer.platooningTrucks.totalPoints, name: "M13 Platooning Trucks", missionNumber: 13)
+            ) {
+                ScorerToggleView(
+                    bindingProperty: $scorer.platooningTrucks.latchedOutsideHome,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "Both trucks are latched together outside of home"
+                )
+                
+                ScorerToggleView(
+                    bindingProperty: $scorer.platooningTrucks.latchedToBridge,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "A truck is latched to the bridge"
                 )
             }
             
             Section(header:
-                        SectionHeaderView(showing: $showing14Helper, score: scorer.healthUnits.totalPoints, name: "M14 Health Units", missionNumber: 14)
+                        SectionHeaderView(showing: $showing14Helper, score: scorer.bridge.totalPoints, name: "M14 Bridge", missionNumber: 14)
+            ) {
+                ScorerPickerView(
+                    bindingProperty: $scorer.bridge.loweredCount,
+                    image: Image(systemName: "hand.point.right.fill"),
+                    title: "Number of bridge decks that have been lowered",
+                    options: ["0", "1", "2", "3"]
+                )
+            }
+            
+            Section(header:
+                        SectionHeaderView(showing: $showing15Helper, score: scorer.loadCargo.totalPoints, name: "M15 Load Cargo", missionNumber: 15)
             ) {
                 ScorerStepperView(
-                    bindingProperty: $scorer.healthUnits.numTouching,
-                    image: Image(systemName: "arrowtriangle.right.fill"),
-                    title: "Health units touching the RePLAY logo or the gray area",
-                    description: "fasdasdasdasdasdasd",
-                    bounds: 0...8
+                    bindingProperty: $scorer.loadCargo.containersOnPlatooningTruck,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Containers only touching the Platooning Trucks",
+                    color: Color.red,
+                    bounds: 0...100
                 )
-                ScorerPickerView(
-                    bindingProperty: $scorer.healthUnits.numLooped,
-                    image: Image(systemName: "arrowtriangle.right.fill"),
-                    title: "Health units looped over a pull-up bar",
-                    description: "2+ white LEGO pieces and 4+ LEGO studs long",
-                    options: ["0", "1", "2", "3", "4"]
+                
+                ScorerStepperView(
+                    bindingProperty: $scorer.loadCargo.containersOnTrain,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Containers only touching the Train",
+                    color: Color.red,
+                    bounds: 0...100
+                )
+                
+                ScorerStepperView(
+                    bindingProperty: $scorer.loadCargo.containersOnCargoShip,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Containers only touching the Cargo Ship's West Deck",
+                    color: Color.red,
+                    bounds: 0...100
                 )
             }
             
             Section(header:
-                        SectionHeaderView(showing: $showing15Helper, score: scorer.precision.totalPoints, name: "M15 Precision", missionNumber: 15)
+                        SectionHeaderView(showing: $showing15Helper, score: scorer.cargoConnect.totalPoints, name: "M15 Cargo Connect", missionNumber: 15)
+            ) {
+                ScorerStepperView(
+                    bindingProperty: $scorer.cargoConnect.numPartlyInCircle,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Containers partly in any circle",
+                    color: Color.red,
+                    bounds: 0...100
+                )
+                
+                ScorerStepperView(
+                    bindingProperty: $scorer.cargoConnect.numCompletelyInCircle,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Containers completely in any circle",
+                    color: Color.red,
+                    bounds: 0...100
+                )
+                
+                ScorerToggleView(
+                    bindingProperty: $scorer.cargoConnect.notHingedBlueInBlue,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "Blue (not hinged) container is in the blue circle",
+                    color: Color.blue
+                )
+                
+                ScorerToggleView(
+                    bindingProperty: $scorer.cargoConnect.limeInLime,
+                    image: Image(systemName: "smallcircle.fill.circle"),
+                    title: "Lime green container completely in the lime green circle",
+                    color: Color.green
+                )
+                
+                ScorerStepperView(
+                    bindingProperty: $scorer.cargoConnect.numCirclesWithComplete,
+                    image: Image(systemName: "circle.fill"),
+                    title: "Circles with at least 1 container completely in them",
+                    color: Color.red,
+                    bounds: 0...100
+                )
+            }
+            Section(header:
+                        SectionHeaderView(showing: $showing15Helper, score: scorer.precision.totalPoints, name: "M17 Precision", missionNumber: 15)
             ) {
                 ScorerStepperView(
                     bindingProperty: $scorer.precision.tokensLeft,
                     image: Image(systemName: "circle.fill"),
-                    title: "Precision tokens left on the field", description: "2+a white LEGO pieces and 4+ LEGO studs long", color: Color.red,
+                    title: "Precision tokens left on the field",
+                    color: Color.red,
                     bounds: 0...6
                 )
             }

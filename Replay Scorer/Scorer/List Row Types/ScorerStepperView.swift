@@ -13,7 +13,6 @@ struct ScorerStepperView: View {
     
     var image: Image
     var title: String
-    var description: String
     var color: Color = Color.gray
     var bounds: ClosedRange<Int>
     
@@ -43,7 +42,6 @@ struct ScorerStepperView_Previews: PreviewProvider {
             bindingProperty: $x,
             image: Image(systemName:"cloud.heavyrain.fill"),
             title: "Number of cubes in the frame or target",
-            description: "test",
             bounds: 0...20
         )
     }

@@ -14,7 +14,6 @@ struct ScorerToggleView: View {
     var image: Image
     var title: String
     var color: Color = Color(.systemBlue)
-    var description: String
     
     var body: some View {
         Toggle(isOn: $bindingProperty) {
@@ -45,8 +44,7 @@ struct ScorerToggleView_Previews: PreviewProvider {
         ScorerToggleView(
             bindingProperty: $x,
             image: Image(systemName: "cloud.heavyrain.fill"),
-            title: "titletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitle",
-            description: "description"
+            title: "titletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitletitle"
         )
     }
 }

@@ -14,7 +14,6 @@ struct ScorerPickerView: View {
     var image: Image
     var title: String
     var color: Color = Color.gray
-    var description: String
     var options: [String]
     
     var body: some View {        
@@ -48,7 +47,6 @@ struct ScorerPickerView_Previews: PreviewProvider {
             bindingProperty: $x,
             image: Image(systemName:"cloud.heavyrain.fill"),
             title: "Part of the innovation Project is touchingaaaaasdasdasdasd",
-            description: "Description",
             options: ["None", "RePlayLogo", "Bench Gray Area"])
     }
 }
